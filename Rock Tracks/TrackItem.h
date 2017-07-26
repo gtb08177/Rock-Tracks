@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Logical model representation to capture the
+ * concept of a 'track'
+ */
 @interface TrackItem : NSObject
+
+@property NSString * trackName;
+@property NSString * artist;
+@property double price;
+@property NSString * artworkUrl;
+@property NSInteger duration;
+@property NSString * releaseDate;
 
 @end

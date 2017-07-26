@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		948920921F28F9D400361C53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920911F28F9D400361C53 /* main.m */; };
 		948920951F28F9D400361C53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920941F28F9D400361C53 /* AppDelegate.m */; };
-		948920981F28F9D400361C53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920971F28F9D400361C53 /* ViewController.m */; };
+		948920981F28F9D400361C53 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920971F28F9D400361C53 /* ListViewController.m */; };
 		9489209B1F28F9D400361C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948920991F28F9D400361C53 /* Main.storyboard */; };
 		9489209D1F28F9D400361C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489209C1F28F9D400361C53 /* Assets.xcassets */; };
 		948920A01F28F9D400361C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9489209E1F28F9D400361C53 /* LaunchScreen.storyboard */; };
 		948920AB1F28F9D400361C53 /* Rock_TracksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920AA1F28F9D400361C53 /* Rock_TracksTests.m */; };
+		948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920B91F28FB1700361C53 /* QueryEngine.m */; };
+		948920BF1F28FBE800361C53 /* TrackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920BE1F28FBE800361C53 /* TrackItem.m */; };
+		948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */; };
+		948920C51F28FDB300361C53 /* TrackItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +35,8 @@
 		948920911F28F9D400361C53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		948920931F28F9D400361C53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		948920941F28F9D400361C53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		948920961F28F9D400361C53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		948920971F28F9D400361C53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		948920961F28F9D400361C53 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		948920971F28F9D400361C53 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		9489209A1F28F9D400361C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9489209C1F28F9D400361C53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9489209F1F28F9D400361C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +44,13 @@
 		948920A61F28F9D400361C53 /* Rock TracksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rock TracksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		948920AA1F28F9D400361C53 /* Rock_TracksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rock_TracksTests.m; sourceTree = "<group>"; };
 		948920AC1F28F9D400361C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948920B81F28FB1700361C53 /* QueryEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryEngine.h; sourceTree = "<group>"; };
+		948920B91F28FB1700361C53 /* QueryEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryEngine.m; sourceTree = "<group>"; };
+		948920BD1F28FBE800361C53 /* TrackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItem.h; sourceTree = "<group>"; };
+		948920BE1F28FBE800361C53 /* TrackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItem.m; sourceTree = "<group>"; };
+		948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItemTableViewCell.h; sourceTree = "<group>"; };
+		948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItemTableViewCell.m; sourceTree = "<group>"; };
+		948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +92,13 @@
 		9489208F1F28F9D400361C53 /* Rock Tracks */ = {
 			isa = PBXGroup;
 			children = (
+				948920C01F28FD8C00361C53 /* Views */,
+				948920BC1F28FBDA00361C53 /* Models */,
+				948920B71F28FB0100361C53 /* Utilities */,
 				948920931F28F9D400361C53 /* AppDelegate.h */,
 				948920941F28F9D400361C53 /* AppDelegate.m */,
-				948920961F28F9D400361C53 /* ViewController.h */,
-				948920971F28F9D400361C53 /* ViewController.m */,
+				948920961F28F9D400361C53 /* ListViewController.h */,
+				948920971F28F9D400361C53 /* ListViewController.m */,
 				948920991F28F9D400361C53 /* Main.storyboard */,
 				9489209C1F28F9D400361C53 /* Assets.xcassets */,
 				9489209E1F28F9D400361C53 /* LaunchScreen.storyboard */,
@@ -109,6 +123,34 @@
 				948920AC1F28F9D400361C53 /* Info.plist */,
 			);
 			path = "Rock TracksTests";
+			sourceTree = "<group>";
+		};
+		948920B71F28FB0100361C53 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				948920B81F28FB1700361C53 /* QueryEngine.h */,
+				948920B91F28FB1700361C53 /* QueryEngine.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		948920BC1F28FBDA00361C53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				948920BD1F28FBE800361C53 /* TrackItem.h */,
+				948920BE1F28FBE800361C53 /* TrackItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		948920C01F28FD8C00361C53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */,
+				948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */,
+				948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +239,7 @@
 			files = (
 				948920A01F28F9D400361C53 /* LaunchScreen.storyboard in Resources */,
 				9489209D1F28F9D400361C53 /* Assets.xcassets in Resources */,
+				948920C51F28FDB300361C53 /* TrackItemTableViewCell.xib in Resources */,
 				9489209B1F28F9D400361C53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				948920981F28F9D400361C53 /* ViewController.m in Sources */,
+				948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */,
+				948920981F28F9D400361C53 /* ListViewController.m in Sources */,
 				948920951F28F9D400361C53 /* AppDelegate.m in Sources */,
+				948920BF1F28FBE800361C53 /* TrackItem.m in Sources */,
+				948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */,
 				948920921F28F9D400361C53 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T36KJJ58V2;
 				INFOPLIST_FILE = "Rock Tracks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rmcnulty.Rock-Tracks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T36KJJ58V2;
 				INFOPLIST_FILE = "Rock Tracks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rmcnulty.Rock-Tracks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

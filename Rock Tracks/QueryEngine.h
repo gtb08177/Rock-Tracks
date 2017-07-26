@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TrackItem.h"
 
 @interface QueryEngine : NSObject
+
+/**
+ * Executes a network request to the given URL
+ * and will call either the success or error block
+ */
++ (void)queryForJsonResponse:(nonnull NSURL *)queryUrl withSuccessBlock:(void (^_Nonnull)(NSArray<TrackItem *> * _Nonnull validTracksFound))successBlock andErrorBlock:(void (^_Nonnull)(NSError *_Nonnull))errorBlock;
 
 @end

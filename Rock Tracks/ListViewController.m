@@ -6,9 +6,10 @@
 //  Copyright © 2017 Ryan McNulty. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ListViewController.h"
 #import "QueryEngine.h"
 #import "TrackItem.h"
+#import "TrackItemTableViewCell.h"
 
 @interface ListViewController ()
 
@@ -21,33 +22,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView setRowHeight:UITableViewAutomaticDimension];
+    
     self.tracks = [[NSArray alloc] init];
     // Initialise in the event of an error, the view controller
     // can still look as it should.
     NSURL * endpoint = [NSURL URLWithString:@"https://itunes.apple.com/search?term=rock&media=music"];
-    [QueryEngine queryForJsonResponse:endpoint withSuccessBlock:^(NSArray<TrackItem *> * _Nonnull validTracksFound) {
-        
-    } andErrorBlock:^(NSError * _Nonnull error) {
-        
-    }];
+    [QueryEngine queryForJsonResponse:endpoint withSuccessBlock:[self defaultSuccessBlock] andErrorBlock:[self defaultErrorBlock]];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-+ (void (^)(NSArray<TrackItem *> * _Nonnull validTracksFound))defaultSuccessBlock {
+- (void (^)(NSArray<TrackItem *> * _Nonnull validTracksFound))defaultSuccessBlock {
     return ^(NSArray<TrackItem *> * _Nonnull validTracksFound) {
-        
+        self.tracks = validTracksFound;
+        [self.tableView reloadData];
     };
 }
 
-+ (void (^)(NSError * _Nonnull))defaultErrorBlock {
+- (void (^)(NSError * _Nonnull))defaultErrorBlock {
     return ^(NSError * _Nonnull error) {
         UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"Error" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction * okAction = [UIAlertAction actionWithTitle:@"Ok - thanks." style:UIAlertActionStyleDefault handler:nil];
+        [alertVC addAction:okAction];
+        [self.navigationController presentViewController:alertVC animated:YES completion:nil];
     };
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TrackItemTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:[TrackItemTableViewCell reuseIdentifier] forIndexPath:indexPath];
+    [cell digestTrackInfo:self.tracks[indexPath.row]];
+    return cell;
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Rock Tracks";
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.tracks count];
 }
 
 @end

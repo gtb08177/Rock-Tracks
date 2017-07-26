@@ -8,17 +8,33 @@
 
 #import "TrackItemTableViewCell.h"
 
+@interface TrackItemTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *trackNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *packshotImageView;
+
+@end
+
 @implementation TrackItemTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)digestTrackInfo:(TrackItem *)track {
+    
+    [self.trackNameLabel setText:track.trackName];
+    [self.artistLabel setText:track.artist];
+    [self.priceLabel setText:[NSString stringWithFormat:@"£%f",track.price]];
+
+    //todo packshot loading
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
++ (NSString *)reuseIdentifier {
+    return @"trackItemTableId";
+}
 
-    // Configure the view for the selected state
+- (NSString *)reuseIdentifier {
+    return [TrackItemTableViewCell reuseIdentifier];
 }
 
 @end

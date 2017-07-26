@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TrackItem.h"
 
 @interface TrackItemTableViewCell : UITableViewCell
+
+- (void)digestTrackInfo:(TrackItem *)track;
++ (NSString *)reuseIdentifier;
 
 @end
