@@ -55,7 +55,7 @@
         [newTrack setArtist:possibleTrack[@"artistName"]];
         [newTrack setPrice:[possibleTrack[@"trackPrice"] doubleValue]];
         [newTrack setTrackName:possibleTrack[@"trackName"]];
-        [newTrack setArtworkUrl:possibleTrack[@""]];
+        [newTrack setArtworkUrl:[NSURL URLWithString:possibleTrack[@"artworkUrl100"]]];
         
         [resultArray addObject:newTrack];
     }

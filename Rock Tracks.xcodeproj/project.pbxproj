@@ -17,7 +17,6 @@
 		948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920B91F28FB1700361C53 /* QueryEngine.m */; };
 		948920BF1F28FBE800361C53 /* TrackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920BE1F28FBE800361C53 /* TrackItem.m */; };
 		948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */; };
-		948920C51F28FDB300361C53 /* TrackItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		948920BE1F28FBE800361C53 /* TrackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItem.m; sourceTree = "<group>"; };
 		948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItemTableViewCell.h; sourceTree = "<group>"; };
 		948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItemTableViewCell.m; sourceTree = "<group>"; };
-		948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +146,6 @@
 			children = (
 				948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */,
 				948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */,
-				948920C31F28FDB300361C53 /* TrackItemTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 			files = (
 				948920A01F28F9D400361C53 /* LaunchScreen.storyboard in Resources */,
 				9489209D1F28F9D400361C53 /* Assets.xcassets in Resources */,
-				948920C51F28FDB300361C53 /* TrackItemTableViewCell.xib in Resources */,
 				9489209B1F28F9D400361C53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +464,7 @@
 				948920B11F28F9D400361C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		948920B21F28F9D400361C53 /* Build configuration list for PBXNativeTarget "Rock TracksTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +473,7 @@
 				948920B41F28F9D400361C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

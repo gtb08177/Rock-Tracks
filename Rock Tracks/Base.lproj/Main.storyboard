@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,19 +33,62 @@
         <scene sceneID="VVS-Rm-SUd">
             <objects>
                 <tableViewController id="EJK-aO-Yja" customClass="ListViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Yp-Pu-Jra">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Yp-Pu-Jra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackItemTableId" id="rWW-1A-Fug" customClass="TrackItemTableViewCell">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rWW-1A-Fug" id="QP1-YJ-NCu">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Album Packshot" translatesAutoresizingMaskIntoConstraints="NO" id="JVx-l6-4cN" userLabel="Packshot">
+                                            <rect key="frame" x="13" y="13" width="150" height="73.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVJ-c7-wOa" userLabel="Track Name">
+                                            <rect key="frame" x="168" y="13" width="199" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-um-nTy" userLabel="Artist">
+                                            <rect key="frame" x="168" y="39" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX9-Vd-9e7" userLabel="Price">
+                                            <rect key="frame" x="168" y="66" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uX9-Vd-9e7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ckT-um-nTy" secondAttribute="bottom" id="CC3-i7-xZg"/>
+                                        <constraint firstItem="ckT-um-nTy" firstAttribute="leading" secondItem="UVJ-c7-wOa" secondAttribute="leading" id="G8j-tg-tmp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ckT-um-nTy" secondAttribute="trailing" id="GYQ-l3-I63"/>
+                                        <constraint firstItem="UVJ-c7-wOa" firstAttribute="leading" secondItem="JVx-l6-4cN" secondAttribute="trailing" constant="5" id="J5g-HO-Nyd"/>
+                                        <constraint firstItem="ckT-um-nTy" firstAttribute="top" secondItem="UVJ-c7-wOa" secondAttribute="bottom" constant="5" id="OC6-ZM-ucz"/>
+                                        <constraint firstItem="uX9-Vd-9e7" firstAttribute="leading" secondItem="UVJ-c7-wOa" secondAttribute="leading" id="TkW-zz-uUh"/>
+                                        <constraint firstItem="UVJ-c7-wOa" firstAttribute="top" secondItem="JVx-l6-4cN" secondAttribute="top" id="a8r-8M-RHL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JVx-l6-4cN" secondAttribute="bottom" constant="5" id="dfN-8C-2jp"/>
+                                        <constraint firstItem="uX9-Vd-9e7" firstAttribute="bottom" secondItem="JVx-l6-4cN" secondAttribute="bottom" id="gBz-RD-Oq1"/>
+                                        <constraint firstItem="JVx-l6-4cN" firstAttribute="top" secondItem="QP1-YJ-NCu" secondAttribute="topMargin" constant="5" id="mDZ-pu-5nr"/>
+                                        <constraint firstItem="JVx-l6-4cN" firstAttribute="width" secondItem="QP1-YJ-NCu" secondAttribute="width" multiplier="0.4" id="mX4-q2-J67"/>
+                                        <constraint firstItem="JVx-l6-4cN" firstAttribute="leading" secondItem="QP1-YJ-NCu" secondAttribute="leadingMargin" constant="5" id="ml7-nm-pJ3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UVJ-c7-wOa" secondAttribute="trailing" id="uDq-9z-O7B"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uX9-Vd-9e7" secondAttribute="trailing" id="xQR-qc-Unz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="artistLabel" destination="ckT-um-nTy" id="Ahk-jv-DqD"/>
+                                    <outlet property="packshotImageView" destination="JVx-l6-4cN" id="9jc-XU-mZx"/>
+                                    <outlet property="priceLabel" destination="uX9-Vd-9e7" id="5lq-cv-aJ0"/>
+                                    <outlet property="trackNameLabel" destination="UVJ-c7-wOa" id="L4U-sk-n1x"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="S8B-Ac-LqK"/>
                                 </connections>
                             </tableViewCell>
@@ -78,4 +123,7 @@
             <point key="canvasLocation" x="69.599999999999994" y="62.518740629685162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Album Packshot" width="50" height="40"/>
+    </resources>
 </document>

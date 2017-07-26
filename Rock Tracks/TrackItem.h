@@ -17,7 +17,7 @@
 @property NSString * trackName;
 @property NSString * artist;
 @property double price;
-@property NSString * artworkUrl;
+@property NSURL * artworkUrl;
 @property NSInteger duration;
 @property NSString * releaseDate;
 

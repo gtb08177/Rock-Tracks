@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Rock Tracks";
+    
+    [self.tableView setEstimatedRowHeight:140];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     
     self.tracks = [[NSArray alloc] init];
@@ -53,10 +56,6 @@
     [cell digestTrackInfo:self.tracks[indexPath.row]];
     return cell;
 
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Rock Tracks";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
