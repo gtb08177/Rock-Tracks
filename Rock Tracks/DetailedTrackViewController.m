@@ -34,7 +34,7 @@
     [self.artistLabel setText:self.thisTrackItem.artist];
     [self.trackPriceLabel setText:[Utils generatePriceLabel:self.thisTrackItem]];
     [self.durationLabel setText:[self friendlyDurationLabel]];
-    [self.releaseDateLabel setText:[self generateDateLabel]];
+    [self.releaseDateLabel setText:[Utils generateDateLabel:self.thisTrackItem]];
     [ImageAssistant loadImageUrl:self.thisTrackItem.artworkUrl forUIImageView:self.packshotImageView];
 }
 
@@ -73,12 +73,7 @@
     self.thisTrackItem = track;
 }
 
-- (NSString *)generateDateLabel {
-    NSDateFormatter * df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"MMM d, yyyy"];
-    
-    return [df stringFromDate:self.thisTrackItem.releaseDate];
-}
+
 
 
 @end

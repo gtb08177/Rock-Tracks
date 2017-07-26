@@ -38,16 +38,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rock TracksTests/Rock_TracksTests.m"
+            timestampString = "522795660.899868"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-testGenerateDateLabel"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rock Tracks/Utils.m"
-            timestampString = "522793128.216508"
+            filePath = "Rock TracksTests/Rock_TracksTests.m"
+            timestampString = "522795772.074022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "+convertValidJSONtoTrackItems:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-testGenerateDateLabel"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

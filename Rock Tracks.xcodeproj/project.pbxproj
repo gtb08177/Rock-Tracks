@@ -100,15 +100,12 @@
 		9489208F1F28F9D400361C53 /* Rock Tracks */ = {
 			isa = PBXGroup;
 			children = (
-				948920C01F28FD8C00361C53 /* Views */,
+				94F3BB2B1F293B1600360625 /* View Controllers */,
+				948920C01F28FD8C00361C53 /* Table Cells */,
 				948920BC1F28FBDA00361C53 /* Models */,
 				948920B71F28FB0100361C53 /* Utilities */,
 				948920931F28F9D400361C53 /* AppDelegate.h */,
 				948920941F28F9D400361C53 /* AppDelegate.m */,
-				948920961F28F9D400361C53 /* ListViewController.h */,
-				948920971F28F9D400361C53 /* ListViewController.m */,
-				94F3BB211F29176800360625 /* DetailedTrackViewController.h */,
-				94F3BB221F29176800360625 /* DetailedTrackViewController.m */,
 				948920991F28F9D400361C53 /* Main.storyboard */,
 				9489209C1F28F9D400361C53 /* Assets.xcassets */,
 				9489209E1F28F9D400361C53 /* LaunchScreen.storyboard */,
@@ -155,13 +152,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		948920C01F28FD8C00361C53 /* Views */ = {
+		948920C01F28FD8C00361C53 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
 				948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */,
 				948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */,
 			);
-			name = Views;
+			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 		94F3BB281F29291A00360625 /* Frameworks */ = {
@@ -170,6 +167,17 @@
 				94F3BB291F29291A00360625 /* SafariServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94F3BB2B1F293B1600360625 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				948920961F28F9D400361C53 /* ListViewController.h */,
+				948920971F28F9D400361C53 /* ListViewController.m */,
+				94F3BB211F29176800360625 /* DetailedTrackViewController.h */,
+				94F3BB221F29176800360625 /* DetailedTrackViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -93,4 +93,11 @@
     return [NSString stringWithFormat:@"%@%.02f",[locale displayNameForKey:NSLocaleCurrencySymbol value:track.currencyIdentifier], track.price];
 }
 
++ (NSString *)generateDateLabel:(TrackItem *)track {
+    NSDateFormatter * df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"MMM d, yyyy"];
+    
+    return [df stringFromDate:track.releaseDate];
+}
+
 @end
