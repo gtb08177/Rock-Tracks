@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbk-ma-Nuc" userLabel="Release Date">
-                                <rect key="frame" x="16" y="473" width="43" height="20.5"/>
+                                <rect key="frame" x="16" y="480" width="43" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                             <constraint firstItem="GEK-ES-VU0" firstAttribute="top" secondItem="dy8-jk-WTb" secondAttribute="bottom" constant="16" id="2Ac-zK-VRt"/>
                             <constraint firstItem="wPl-5c-pN7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xbk-ma-Nuc" secondAttribute="bottom" constant="5" id="3R8-Xg-TyM"/>
                             <constraint firstItem="wPl-5c-pN7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xQ-Tq-Nxm"/>
-                            <constraint firstItem="Xbk-ma-Nuc" firstAttribute="top" secondItem="PEe-5y-ydr" secondAttribute="bottom" constant="-2" id="7Ux-SN-TIR"/>
+                            <constraint firstItem="Xbk-ma-Nuc" firstAttribute="top" secondItem="PEe-5y-ydr" secondAttribute="bottom" constant="5" id="7Ux-SN-TIR"/>
                             <constraint firstItem="DBO-ka-N9L" firstAttribute="leading" secondItem="GEK-ES-VU0" secondAttribute="leading" id="7vE-VN-h8t"/>
                             <constraint firstItem="3N5-aE-xKk" firstAttribute="top" secondItem="DBO-ka-N9L" secondAttribute="bottom" constant="8" id="Dfc-v9-mKE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dy8-jk-WTb" secondAttribute="trailing" constant="-16" id="EKc-sy-HTa"/>
@@ -118,7 +118,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Album Packshot" translatesAutoresizingMaskIntoConstraints="NO" id="JVx-l6-4cN" userLabel="Packshot">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Album Packshot" translatesAutoresizingMaskIntoConstraints="NO" id="JVx-l6-4cN" userLabel="Packshot">
                                             <rect key="frame" x="13" y="13" width="131.5" height="73.5"/>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>

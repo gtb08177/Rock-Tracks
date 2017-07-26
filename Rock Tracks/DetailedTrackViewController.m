@@ -8,8 +8,10 @@
 
 #import "DetailedTrackViewController.h"
 #import "ImageAssistant.h"
+#import <SafariServices/SafariServices.h>
+#import "Utils.h"
 
-@interface DetailedTrackViewController ()
+@interface DetailedTrackViewController () <SFSafariViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *packshotImageView;
 @property (weak, nonatomic) IBOutlet UILabel *trackName;
@@ -30,29 +32,41 @@
     
     [self.trackName setText:self.thisTrackItem.trackName];
     [self.artistLabel setText:self.thisTrackItem.artist];
-    [self.trackPriceLabel setText:[NSString stringWithFormat:@"£%.02f",self.thisTrackItem.price]];
-    [self.durationLabel setText:[NSString stringWithFormat:@"%ld seconds", self.thisTrackItem.duration]];
+    [self.trackPriceLabel setText:[Utils generatePriceLabel:self.thisTrackItem]];
+    [self.durationLabel setText:[self friendlyDurationLabel]];
     [self.releaseDateLabel setText:self.thisTrackItem.releaseDate];
     [ImageAssistant loadImageUrl:self.thisTrackItem.artworkUrl forUIImageView:self.packshotImageView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)friendlyDurationLabel {
+    NSInteger mins = self.thisTrackItem.duration % 60;
+    NSInteger seconds = (self.thisTrackItem.duration / 60) % 60;
+    
+    return [NSString stringWithFormat:@"%ld:%.02ld",mins,seconds];
 }
-*/
 
 - (IBAction)launchTrackViewUrl:(id)sender {
-    [[UIApplication sharedApplication] openURL:self.thisTrackItem.trackViewUrl];
+    SFSafariViewController * safariViewController = [[SFSafariViewController alloc] initWithURL:self.thisTrackItem.trackViewUrl];
+    safariViewController.delegate = self;
+    [self presentViewController:safariViewController animated:true completion:nil];
+}
+
+/*! @abstract Delegate callback called when the user taps the Done button. Upon this call, the view controller is dismissed modally. */
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    
+}
+
+/*! @abstract Invoked when the initial URL load is complete.
+ @param success YES if loading completed successfully, NO if loading failed.
+ @discussion This method is invoked when SFSafariViewController completes the loading of the URL that you pass
+ to its initializer. It is not invoked for any subsequent page loads in the same SFSafariViewController instance.
+ */
+- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
+    
 }
 
 - (void)digestTrackItem:(TrackItem *)track {

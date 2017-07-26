@@ -21,5 +21,6 @@
 @property NSInteger duration;
 @property NSString * releaseDate;
 @property NSURL * trackViewUrl;
+@property NSString * currencyIdentifier;
 
 @end

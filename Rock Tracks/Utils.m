@@ -1,14 +1,14 @@
 //
-//  QueryEngine.m
+//  Utils.m
 //  Rock Tracks
 //
 //  Created by Ryan McNulty on 26/07/2017.
 //  Copyright © 2017 Ryan McNulty. All rights reserved.
 //
 
-#import "QueryEngine.h"
+#import "Utils.h"
 
-@implementation QueryEngine
+@implementation Utils
 
 + (void)queryForJsonResponse:(nonnull NSURL *)queryUrl withSuccessBlock:(void (^_Nonnull)(NSArray<TrackItem *> * _Nonnull validTracksFound))successBlock andErrorBlock:(void (^_Nonnull)(NSError *_Nonnull))errorBlock {
     
@@ -37,7 +37,7 @@
             }
             else {
                 // Happy path
-                successBlock([QueryEngine convertValidJSONtoTrackItems:result]);
+                successBlock([Utils convertValidJSONtoTrackItems:result]);
             }
         }
     }];
@@ -48,7 +48,7 @@
 + (NSArray<TrackItem *> *)convertValidJSONtoTrackItems:(NSDictionary *)jsonResponse {
     NSMutableArray<TrackItem *> * resultArray = [[NSMutableArray alloc] init];
     
-    NSArray * allTracks = [QueryEngine getJSONSafeArray:jsonResponse[@"results"]];
+    NSArray * allTracks = [Utils getJSONSafeArray:jsonResponse[@"results"]];
     
     for (NSDictionary * possibleTrack in allTracks){
         TrackItem * newTrack = [[TrackItem alloc] init];
@@ -56,9 +56,11 @@
         [newTrack setPrice:[possibleTrack[@"trackPrice"] doubleValue]];
         [newTrack setTrackName:possibleTrack[@"trackName"]];
         [newTrack setArtworkUrl:[NSURL URLWithString:possibleTrack[@"artworkUrl100"]]];
-        [newTrack setTrackViewUrl:[NSURL URLWithString:possibleTrack[@"trackViewUrl"]]];
+        NSString * trackViewString = possibleTrack[@"trackViewUrl"];
+        [newTrack setTrackViewUrl:[NSURL URLWithString:trackViewString]];
         [newTrack setReleaseDate:possibleTrack[@"releaseDate"]];
         [newTrack setDuration:[possibleTrack[@"trackTimeMillis"] longValue] * 0.001];
+        [newTrack setCurrencyIdentifier:possibleTrack[@"currency"]];
         
         [resultArray addObject:newTrack];
     }
@@ -79,6 +81,11 @@
     }
     
     return (NSArray *) object;
+}
+
++ (NSString *)generatePriceLabel:(TrackItem *)track {
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:track.currencyIdentifier];
+    return [NSString stringWithFormat:@"%@%.02f",[locale displayNameForKey:NSLocaleCurrencySymbol value:track.currencyIdentifier], track.price];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ListViewController.h"
-#import "QueryEngine.h"
+#import "Utils.h"
 #import "TrackItem.h"
 #import "TrackItemTableViewCell.h"
 #import "DetailedTrackViewController.h"
@@ -32,7 +32,7 @@
     // Initialise in the event of an error, the view controller
     // can still look as it should.
     NSURL * endpoint = [NSURL URLWithString:@"https://itunes.apple.com/search?term=rock&media=music"];
-    [QueryEngine queryForJsonResponse:endpoint withSuccessBlock:[self defaultSuccessBlock] andErrorBlock:[self defaultErrorBlock]];
+    [Utils queryForJsonResponse:endpoint withSuccessBlock:[self defaultSuccessBlock] andErrorBlock:[self defaultErrorBlock]];
 }
 
 - (void (^)(NSArray<TrackItem *> * _Nonnull validTracksFound))defaultSuccessBlock {

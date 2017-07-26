@@ -14,11 +14,12 @@
 		9489209D1F28F9D400361C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489209C1F28F9D400361C53 /* Assets.xcassets */; };
 		948920A01F28F9D400361C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9489209E1F28F9D400361C53 /* LaunchScreen.storyboard */; };
 		948920AB1F28F9D400361C53 /* Rock_TracksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920AA1F28F9D400361C53 /* Rock_TracksTests.m */; };
-		948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920B91F28FB1700361C53 /* QueryEngine.m */; };
+		948920BA1F28FB1700361C53 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920B91F28FB1700361C53 /* Utils.m */; };
 		948920BF1F28FBE800361C53 /* TrackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920BE1F28FBE800361C53 /* TrackItem.m */; };
 		948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */; };
 		94F3BB231F29176800360625 /* DetailedTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB221F29176800360625 /* DetailedTrackViewController.m */; };
 		94F3BB261F291CA900360625 /* ImageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB251F291CA900360625 /* ImageAssistant.m */; };
+		94F3BB2A1F29291A00360625 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F3BB291F29291A00360625 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,8 @@
 		948920A61F28F9D400361C53 /* Rock TracksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rock TracksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		948920AA1F28F9D400361C53 /* Rock_TracksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rock_TracksTests.m; sourceTree = "<group>"; };
 		948920AC1F28F9D400361C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		948920B81F28FB1700361C53 /* QueryEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryEngine.h; sourceTree = "<group>"; };
-		948920B91F28FB1700361C53 /* QueryEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryEngine.m; sourceTree = "<group>"; };
+		948920B81F28FB1700361C53 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		948920B91F28FB1700361C53 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		948920BD1F28FBE800361C53 /* TrackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItem.h; sourceTree = "<group>"; };
 		948920BE1F28FBE800361C53 /* TrackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItem.m; sourceTree = "<group>"; };
 		948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItemTableViewCell.h; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		94F3BB221F29176800360625 /* DetailedTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedTrackViewController.m; sourceTree = "<group>"; };
 		94F3BB241F291CA900360625 /* ImageAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAssistant.h; sourceTree = "<group>"; };
 		94F3BB251F291CA900360625 /* ImageAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAssistant.m; sourceTree = "<group>"; };
+		94F3BB291F29291A00360625 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F3BB2A1F29291A00360625 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				9489208F1F28F9D400361C53 /* Rock Tracks */,
 				948920A91F28F9D400361C53 /* Rock TracksTests */,
 				9489208E1F28F9D400361C53 /* Products */,
+				94F3BB281F29291A00360625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,8 +138,8 @@
 		948920B71F28FB0100361C53 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				948920B81F28FB1700361C53 /* QueryEngine.h */,
-				948920B91F28FB1700361C53 /* QueryEngine.m */,
+				948920B81F28FB1700361C53 /* Utils.h */,
+				948920B91F28FB1700361C53 /* Utils.m */,
 				94F3BB241F291CA900360625 /* ImageAssistant.h */,
 				94F3BB251F291CA900360625 /* ImageAssistant.m */,
 			);
@@ -158,6 +162,14 @@
 				948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		94F3BB281F29291A00360625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94F3BB291F29291A00360625 /* SafariServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F3BB261F291CA900360625 /* ImageAssistant.m in Sources */,
-				948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */,
+				948920BA1F28FB1700361C53 /* Utils.m in Sources */,
 				948920981F28F9D400361C53 /* ListViewController.m in Sources */,
 				948920951F28F9D400361C53 /* AppDelegate.m in Sources */,
 				948920BF1F28FBE800361C53 /* TrackItem.m in Sources */,
