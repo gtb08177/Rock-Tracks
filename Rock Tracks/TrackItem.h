@@ -19,7 +19,7 @@
 @property double price;
 @property NSURL * artworkUrl;
 @property NSInteger duration;
-@property NSString * releaseDate;
+@property NSDate * releaseDate;
 @property NSURL * trackViewUrl;
 @property NSString * currencyIdentifier;
 

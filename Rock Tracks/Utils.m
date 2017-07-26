@@ -58,7 +58,12 @@
         [newTrack setArtworkUrl:[NSURL URLWithString:possibleTrack[@"artworkUrl100"]]];
         NSString * trackViewString = possibleTrack[@"trackViewUrl"];
         [newTrack setTrackViewUrl:[NSURL URLWithString:trackViewString]];
-        [newTrack setReleaseDate:possibleTrack[@"releaseDate"]];
+        
+        NSDateFormatter * df = [[NSDateFormatter alloc] init];
+        [df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+        
+        NSDate * release = [df dateFromString:possibleTrack[@"releaseDate"]];
+        [newTrack setReleaseDate:release];
         [newTrack setDuration:[possibleTrack[@"trackTimeMillis"] longValue] * 0.001];
         [newTrack setCurrencyIdentifier:possibleTrack[@"currency"]];
         
