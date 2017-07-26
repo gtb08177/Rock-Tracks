@@ -10,6 +10,7 @@
 #import "QueryEngine.h"
 #import "TrackItem.h"
 #import "TrackItemTableViewCell.h"
+#import "DetailedTrackViewController.h"
 
 @interface ListViewController ()
 
@@ -60,6 +61,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tracks count];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TrackItem * toServe = self.tracks[[self.tableView indexPathForSelectedRow].row];
+    
+    DetailedTrackViewController * dest = (DetailedTrackViewController *) [segue destinationViewController];
+    [dest digestTrackItem:toServe];
 }
 
 @end

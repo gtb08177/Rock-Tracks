@@ -17,6 +17,8 @@
 		948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920B91F28FB1700361C53 /* QueryEngine.m */; };
 		948920BF1F28FBE800361C53 /* TrackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920BE1F28FBE800361C53 /* TrackItem.m */; };
 		948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */; };
+		94F3BB231F29176800360625 /* DetailedTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB221F29176800360625 /* DetailedTrackViewController.m */; };
+		94F3BB261F291CA900360625 /* ImageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB251F291CA900360625 /* ImageAssistant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		948920BE1F28FBE800361C53 /* TrackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItem.m; sourceTree = "<group>"; };
 		948920C11F28FDB300361C53 /* TrackItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackItemTableViewCell.h; sourceTree = "<group>"; };
 		948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackItemTableViewCell.m; sourceTree = "<group>"; };
+		94F3BB211F29176800360625 /* DetailedTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedTrackViewController.h; sourceTree = "<group>"; };
+		94F3BB221F29176800360625 /* DetailedTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedTrackViewController.m; sourceTree = "<group>"; };
+		94F3BB241F291CA900360625 /* ImageAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAssistant.h; sourceTree = "<group>"; };
+		94F3BB251F291CA900360625 /* ImageAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAssistant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 				948920941F28F9D400361C53 /* AppDelegate.m */,
 				948920961F28F9D400361C53 /* ListViewController.h */,
 				948920971F28F9D400361C53 /* ListViewController.m */,
+				94F3BB211F29176800360625 /* DetailedTrackViewController.h */,
+				94F3BB221F29176800360625 /* DetailedTrackViewController.m */,
 				948920991F28F9D400361C53 /* Main.storyboard */,
 				9489209C1F28F9D400361C53 /* Assets.xcassets */,
 				9489209E1F28F9D400361C53 /* LaunchScreen.storyboard */,
@@ -128,6 +136,8 @@
 			children = (
 				948920B81F28FB1700361C53 /* QueryEngine.h */,
 				948920B91F28FB1700361C53 /* QueryEngine.m */,
+				94F3BB241F291CA900360625 /* ImageAssistant.h */,
+				94F3BB251F291CA900360625 /* ImageAssistant.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -254,10 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F3BB261F291CA900360625 /* ImageAssistant.m in Sources */,
 				948920BA1F28FB1700361C53 /* QueryEngine.m in Sources */,
 				948920981F28F9D400361C53 /* ListViewController.m in Sources */,
 				948920951F28F9D400361C53 /* AppDelegate.m in Sources */,
 				948920BF1F28FBE800361C53 /* TrackItem.m in Sources */,
+				94F3BB231F29176800360625 /* DetailedTrackViewController.m in Sources */,
 				948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */,
 				948920921F28F9D400361C53 /* main.m in Sources */,
 			);

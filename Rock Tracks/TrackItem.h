@@ -20,5 +20,6 @@
 @property NSURL * artworkUrl;
 @property NSInteger duration;
 @property NSString * releaseDate;
+@property NSURL * trackViewUrl;
 
 @end

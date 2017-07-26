@@ -56,6 +56,9 @@
         [newTrack setPrice:[possibleTrack[@"trackPrice"] doubleValue]];
         [newTrack setTrackName:possibleTrack[@"trackName"]];
         [newTrack setArtworkUrl:[NSURL URLWithString:possibleTrack[@"artworkUrl100"]]];
+        [newTrack setTrackViewUrl:[NSURL URLWithString:possibleTrack[@"trackViewUrl"]]];
+        [newTrack setReleaseDate:possibleTrack[@"releaseDate"]];
+        [newTrack setDuration:[possibleTrack[@"trackTimeMillis"] longValue] * 0.001];
         
         [resultArray addObject:newTrack];
     }
