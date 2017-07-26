@@ -21,6 +21,7 @@ Furthermore, the release date has been read and converted from string to nsdate 
 
 NB. This was my first time using story boards - previous experience is mainly legacy applications which manually manage UIViewController stacks.
 
+It should also be noted that due to ATS constraints, I had to change the info.plist file to allow nonSSL traffic.
 
 Issues
 ------
