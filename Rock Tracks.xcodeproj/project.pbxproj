@@ -19,7 +19,6 @@
 		948920C41F28FDB300361C53 /* TrackItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948920C21F28FDB300361C53 /* TrackItemTableViewCell.m */; };
 		94F3BB231F29176800360625 /* DetailedTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB221F29176800360625 /* DetailedTrackViewController.m */; };
 		94F3BB261F291CA900360625 /* ImageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3BB251F291CA900360625 /* ImageAssistant.m */; };
-		94F3BB2A1F29291A00360625 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F3BB291F29291A00360625 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F3BB2A1F29291A00360625 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

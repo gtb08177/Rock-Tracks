@@ -49,23 +49,7 @@
 }
 
 - (IBAction)launchTrackViewUrl:(id)sender {
-    SFSafariViewController * safariViewController = [[SFSafariViewController alloc] initWithURL:self.thisTrackItem.trackViewUrl];
-    safariViewController.delegate = self;
-    [self presentViewController:safariViewController animated:true completion:nil];
-}
-
-/*! @abstract Delegate callback called when the user taps the Done button. Upon this call, the view controller is dismissed modally. */
-- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    
-}
-
-/*! @abstract Invoked when the initial URL load is complete.
- @param success YES if loading completed successfully, NO if loading failed.
- @discussion This method is invoked when SFSafariViewController completes the loading of the URL that you pass
- to its initializer. It is not invoked for any subsequent page loads in the same SFSafariViewController instance.
- */
-- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
-    
+    [[UIApplication sharedApplication] openURL:self.thisTrackItem.trackViewUrl];
 }
 
 - (void)digestTrackItem:(TrackItem *)track {

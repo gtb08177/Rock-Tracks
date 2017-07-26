@@ -40,7 +40,9 @@
 - (void (^)(NSArray<TrackItem *> * _Nonnull validTracksFound))defaultSuccessBlock {
     return ^(NSArray<TrackItem *> * _Nonnull validTracksFound) {
         self.tracks = validTracksFound;
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     };
 }
 
