@@ -38,10 +38,9 @@
     [ImageAssistant loadImageUrl:self.thisTrackItem.artworkUrl forUIImageView:self.packshotImageView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+/**
+ * Returns a min:sec string form
+ */
 - (NSString *)friendlyDurationLabel {
     NSInteger mins = self.thisTrackItem.duration % 60;
     NSInteger seconds = (self.thisTrackItem.duration / 60) % 60;
@@ -72,8 +71,5 @@
 - (void)digestTrackItem:(TrackItem *)track {
     self.thisTrackItem = track;
 }
-
-
-
 
 @end

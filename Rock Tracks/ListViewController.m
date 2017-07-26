@@ -25,12 +25,14 @@
     
     self.title = @"Rock Tracks";
     
+    // Allow cells to size themselves
     [self.tableView setEstimatedRowHeight:140];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     
-    self.tracks = [[NSArray alloc] init];
     // Initialise in the event of an error, the view controller
     // can still look as it should.
+    self.tracks = [[NSArray alloc] init];
+
     NSURL * endpoint = [NSURL URLWithString:@"https://itunes.apple.com/search?term=rock&media=music"];
     [Utils queryForJsonResponse:endpoint withSuccessBlock:[self defaultSuccessBlock] andErrorBlock:[self defaultErrorBlock]];
 }
@@ -52,6 +54,8 @@
     };
 }
 
+# pragma mark - UITableView
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TrackItemTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:[TrackItemTableViewCell reuseIdentifier] forIndexPath:indexPath];
     [cell digestTrackInfo:self.tracks[indexPath.row]];
@@ -62,6 +66,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tracks count];
 }
+
+# pragma mark - View controller transition
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TrackItem * toServe = self.tracks[[self.tableView indexPathForSelectedRow].row];

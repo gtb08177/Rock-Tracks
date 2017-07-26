@@ -8,6 +8,7 @@
 
 #import "TrackItemTableViewCell.h"
 #import "ImageAssistant.h"
+#import "Utils.h"
 
 @interface TrackItemTableViewCell ()
 
@@ -27,7 +28,7 @@
     [self.artistLabel setText:track.artist];
     
     
-    [self.priceLabel setText:[self generatePriceLabel:track]];
+    [self.priceLabel setText:[Utils generatePriceLabel:track]];
 
     [ImageAssistant loadImageUrl:track.artworkUrl forUIImageView:self.packshotImageView];
 }
@@ -38,11 +39,6 @@
 
 - (NSString *)reuseIdentifier {
     return [TrackItemTableViewCell reuseIdentifier];
-}
-
-- (NSString *)generatePriceLabel:(TrackItem *)track {
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:track.currencyIdentifier];
-    return [NSString stringWithFormat:@"%@%.02f",[locale displayNameForKey:NSLocaleCurrencySymbol value:track.currencyIdentifier], track.price];
 }
 
 @end

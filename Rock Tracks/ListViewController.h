@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ * Table view controller aimed at displaying track items
+ */
 @interface ListViewController : UITableViewController
 
 @end

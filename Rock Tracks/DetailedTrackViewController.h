@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TrackItem.h"
 
+/**
+ * View controller for showing details of a given track item
+ */
 @interface DetailedTrackViewController : UIViewController
 
 - (void)digestTrackItem:(TrackItem *)track;
