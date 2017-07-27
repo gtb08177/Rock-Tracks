@@ -5,33 +5,36 @@
 
 The Solution
 ------------
-The solution I have created matches that of what was asked for in the design document. This includes the no third party dependencies, app name, minimum target level SDK and written in one of the nominated languages.
+The solution I have created matches that of what was asked for in the design document. 
+This includes the no third party dependencies, app name, minimum target level SDK and written in one of the nominated languages.
 
-Screen 1 consits of an UITableViewController. This decision was made due to the assumption made that the app would not be limited to 5 tracks and also due to the fact it is a very efficient mechanism in handling all the data as the view cells are recycled - keeping memory footprint at a minimum. 
+Screen 1 consists of an UITableViewController. This decision was made due to the assumption made that the app would not be limited to 5 tracks and also due to the fact it is a very efficient mechanism in handling all the data as the view cells are recycled - keeping memory footprint at a minimum. 
 
-For screen 2, a simple view controller as added. Using the wireframe I set the image view to consume an adequate amount of room on the screen without pushing elements below it off screen. 
+Screen 2, is a simple view controller as added. Using the wireframe I set the image view to consume an adequate amount of room on the screen without pushing elements below it off screen. 
 
 A utilities class was provided to allow reuse (if required) for parsing and obtaining TrackItem objects (logical model of the JSON instance). This has error capturing abilities, informing the user if something went wrong and why.
 
-Knowing that images were required on both screens, I adapted my prototype code to become 'ImageAssistant' which can simply take a URL and an UIImageView object to display it too - ensuring all is done async.
+Knowing that images were required on both screens, I adapted my prototype code to become 'ImageAssistant' which can simply take a URL and a UIImageView object to display it too - ensuring all is done async off the main thread.
 
 When the track items are digested, the currency field is stored and read at a later date such that if the query was to change e.g. from the US query provided to a UK one, the application will automatically detect to show £ instead of $.
 
-Furthermore, the release date has been read and converted from string to nsdate in order to allow better portability of that information, and allowing customisation on the view aspects - as can be seen within the detailed view controller. 
+Furthermore, the release date has been read and converted from string to nsdate in order to allow better portability of that data, and allowing customisation on the view aspects - as can be seen within the detailed view controller. 
 
 NB. This was my first time using story boards - previous experience is mainly legacy applications which manually manage UIViewController stacks.
-
 It should also be noted that due to ATS constraints, I had to change the info.plist file to allow nonSSL traffic.
 
-Issues
-------
-It appears that the url requested to launch to from the 'More info' button carries out some query parameters maniuplation - seems to do some form of origin redirect, which appears that the SafariViewController (Apple's informed way of showing any web content as of iOS 9) does not accept. The code can be validated to see that the URL is being accepted by the SafariViewController and gives back a TRUE boolean response - depsite the UI showing it failed. 
+
+Issues encountered
+------------------
+It was noticed when linking out to the url off the back of the 'More info' button that the simulator would fail. After further investigation, this is due to the simulator not having an iTunes store to redirect you to whereas on a device you do.
+
+Please note this is not a problem with the code base but the simulator platform. 
 
 
 Possible Improvements
 ---------------------
 Allow the user to customer certain UI visuals e.g. how they wish the release date to be formated. 
 
-More defensive measure around customer string making such as price - to return a 'unknown' if the currency symbol cannot be found
+More defensive measure around custom string making such as price - to return a 'unknown' if the currency symbol cannot be found
 
 Add further unit tests and documentation.
