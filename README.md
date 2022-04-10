@@ -1,3 +1,2 @@
 # Rock-Tracks
-
-A sample implementation required for Stewart Paxton, Development Manager.
+A sample application for iOS that utilises iTunes APIs to list music items on a scrollable chart.
